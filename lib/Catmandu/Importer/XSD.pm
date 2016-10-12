@@ -19,7 +19,7 @@ has 'mixed'    => (is => 'ro' , default => sub { 'ATTRIBUTES' });
 has 'prefixes' => (is => 'ro' , default => sub { [] });
 has 'files'    => (is => 'ro');
 has 'xpath'    => (is => 'ro' , default => sub { '*' });
-
+has 'example'  => (is => 'ro');
 
 has 'xsd'      => (is => 'lazy');
 
@@ -36,7 +36,25 @@ sub _build_xsd {
 sub generator {
     my $self = $_[0];
 
-    $self->files ? $self->multi_file_generator : $self->single_file_generator;
+    if ($self->example) {
+        $self->example_generator
+    }
+    elsif ($self->files) {
+        $self->multi_file_generator
+    }
+    else {
+        $self->single_file_generator
+    }
+}
+
+sub example_generator {
+    my $self = $_[0];
+
+    my $count = 0;
+
+    sub {
+        $count++ ? undef : $self->xsd->template;
+    };
 }
 
 sub multi_file_generator {
@@ -164,6 +182,13 @@ Optional. Don't read the content from the standard input but use the 'files' par
 as a glob for one or more filenames. E.g.
 
     catmandu ... --files 'data/input/*.xml'
+
+=item examples
+
+Optional. Don't do anything only show an example output how a document should be
+structured in the given XSD scheme. E.g.
+
+    catmandu convert XSD --root {}shiporder --schemas "t/demo/ead/*xsd" --example 1 to YAML
 
 =item fix
 

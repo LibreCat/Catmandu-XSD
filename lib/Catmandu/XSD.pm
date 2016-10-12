@@ -78,6 +78,12 @@ sub BUILD {
     $schema = undef;
 }
 
+sub template {
+    my ($self) = @_;
+    my $schema = XML::Compile::Cache->new($self->schemas);
+    $schema->template('PERL', $self->root , show => 'ALL');
+}
+
 sub parse {
     my ($self,$input) = @_;
     $self->_reader->($input);
@@ -143,6 +149,14 @@ Catmandu::XSD - Modules for handling XML data with XSD compilation
                                  --template t/xml_record.tt
                                  --template t/xml_footer.tt
                                  < shiporder.YAML
+
+     ## Example documents
+
+     # Show an example how a valid XML document needs to be structured for an
+     # XSD scheme.
+     catmandu convert XSD --root {}shiporder
+                          --schemas "t/demo/order/*xsd"
+                          --example 1 to YAML
 
 =head1 DESCRIPTION
 
