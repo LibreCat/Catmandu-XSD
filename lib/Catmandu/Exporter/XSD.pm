@@ -49,6 +49,7 @@ sub _build_tt {
     if ($self->template) {
         Catmandu->exporter(
             'Template',
+            fh              => $self->fh ,
             template_before => $self->template_before ,
             template        => $self->template ,
             template_after  => $self->template_after ,
