@@ -166,7 +166,7 @@ This behavious can be changed by setting the 'mixed' flag:
 
     Parse and validate XML data using an XSD file for structural data
 
-- [Catmandu::Importer::PNX](https://metacpan.org/pod/Catmandu::Importer::PNX)
+- [Catmandu::Importer::XSD](https://metacpan.org/pod/Catmandu::Importer::XSD)
 
     Serialize and validate XML data using an XSD file for structural data
 

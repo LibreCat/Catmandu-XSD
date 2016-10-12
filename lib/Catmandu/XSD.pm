@@ -293,9 +293,11 @@ university libraries to process metadata collections.
 For more information on Catmandu visit: http://librecat.org/Catmandu/
 or follow the blog posts at: https://librecatproject.wordpress.com/
 
-=head1 COPYRIGHT AND LICENSE
+=head1 AUTHOR
 
-Patrick Hochstenbach, 2016 -
+Patrick Hochstenbach , C<< patrick.hochstenbach at ugent.be >>
+
+=head1 COPYRIGHT AND LICENSE
 
 This is free software; you can redistribute it and/or modify it under the same
 terms as the Perl 5 programming language system itself.
