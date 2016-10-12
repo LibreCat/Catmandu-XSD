@@ -267,7 +267,7 @@ This behavious can be changed by setting the 'mixed' flag:
 
 Parse and validate XML data using an XSD file for structural data
 
-=item L<Catmandu::Importer::PNX>
+=item L<Catmandu::Importer::XSD>
 
 Serialize and validate XML data using an XSD file for structural data
 
