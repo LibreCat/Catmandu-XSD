@@ -97,3 +97,124 @@ sub single_file_generator {
 }
 
 1;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+Catmandu::Importer::XSD - Import and validate serialized XML documents
+
+=head1 SYNOPSIS
+
+    # Compile an XSD schema file and parse one shiporder.xml file
+    catmandu convert XSD --root '{}shiporder'
+                         --schemas demo/order/*.xsd
+                         to YAML < shiporder.xml
+
+    # Same as above but parse more than one file into an array of records
+    catmandu convert XSD --root '{}shiporder'
+                         --schemas demo/order/*.xsd
+                         --files 'data/*.xml'
+                         to YAML
+
+    # Same as above but all array of records are in a XML container file
+    catmandu convert XSD --root '{}shiporder'
+                         --schemas demo/order/*.xsd
+                         --xpath '/Container/List//Record/Payload/*'
+                         to YAML < data/container.xml
+
+    # In Perl
+    use Catmandu;
+
+    my $importer = Catmandu->importer('XSD',
+                file => 'ex/data.xml'
+                root => ...,
+                schemas => [ ...]
+    );
+
+    my $n = $importer->each(sub {
+        my $hashref = $_[0];
+        # ...
+    });
+
+=head1 DESCRIPTION
+
+This is a L<Catmandu::Importer> for parsing and validating XML data using one or
+more XSD schema files.
+
+=head1 CONFIGURATION
+
+=over
+
+=item file
+
+Read input from a local file given by its path. Alternatively a scalar
+reference can be passed to read from a string.
+
+=item fh
+
+Read input from an L<IO::Handle>. If not specified, L<Catmandu::Util::io> is used to
+create the input stream from the C<file> argument or by using STDIN.
+
+=item files
+
+Optional. Don't read the content from the standard input but use the 'files' parameter
+as a glob for one or more filenames. E.g.
+
+    catmandu ... --files 'data/input/*.xml'
+
+=item fix
+
+An ARRAY of one or more fixes or file scripts to be applied to imported items.
+
+=item root
+
+Required. The name (and namespace) of the root element of the XML document. E.g.:
+
+    {}shiporder
+    {http://www.loc.gov/mods/v3}mods
+    {urn:isbn:1-931666-22-9}ead
+
+=item schemas
+
+Required. An array or comma separated list of XSD schema locations.
+
+=item xpath
+
+Optional. An XPath expression, the XML container in which the PNX record can
+be found. Default : /oai:OAI-PMH/oai:ListRecords//oai:record/oai:metadata/*
+
+=item prefixes
+
+Optional. An array or comma delimited string of namespace prefixes to be used
+hand handling XML files. E.g.
+
+    # On the command line:
+    catmandu ... --prefixes ead:urn:isbn:1-931666-22-9,...
+
+    # In Perl
+    prefixes => [
+        ead => 'urn:isbn:1-931666-22-9' ,
+        ... => ...
+    ]
+
+=item mixed
+
+Optional. The handling of mixed element content. One of ATTRIBUTES (default),
+TEXTUAL, STRUCTURAL, XML_NODE, XML_STRING, CODE reference. See also
+L<Catmandu::XSD> and L<XML::Compile::Translate::Reader>
+
+=back
+
+=head1 METHODS
+
+Every L<Catmandu::Importer> is a L<Catmandu::Iterable> all its methods are
+inherited.
+
+=head1 SEE ALSO
+
+L<Catmandu::Importer>, L<Catmandu::XSD>
+
+=cut
