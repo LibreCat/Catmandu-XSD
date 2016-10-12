@@ -1,0 +1,42 @@
+---
+importer:
+    order:
+        package: XSD
+        options:
+            files: demo/order/id*.xml
+            root: "{}shiporder"
+            schemas: demo/order/*.xsd
+            #xpath: /Container/List//Record/Payload/*
+
+    ead:
+        package: XSD
+        options:
+            root: "{urn:isbn:1-931666-22-9}ead"
+            schemas: demo/ead/*.xsd
+    mods:
+        package: XSD
+        options:
+            root: "{http://www.loc.gov/mods/v3}mods"
+            schemas: demo/mods/*.xsd
+exporter:
+    ead:
+        package: XSD
+        options:
+            root: "{urn:isbn:1-931666-22-9}ead"
+            schemas: demo/ead/*.xsd
+    order:
+        package: XSD
+        options:
+            root: "{}shiporder"
+            schemas: demo/order/*.xsd
+            # split: 1
+            # split_directory: demo/order
+            # split_pattern: id_%s.xml
+            template_before: demo/order/xml_header.tt
+            template: demo/order/xml_record.tt
+            template_after: demo/order/xml_footer.tt
+    mods:
+        package: XSD
+        options:
+            root: "{http://www.loc.gov/mods/v3}mods"
+            schemas: demo/mods/*.xsd

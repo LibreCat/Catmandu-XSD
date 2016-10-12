@@ -1,0 +1,4 @@
+.build
+local
+cpanfile.snapshot
+Catmandu-XSD-*
