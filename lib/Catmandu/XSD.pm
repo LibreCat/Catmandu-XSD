@@ -24,9 +24,25 @@ has 'schemas'   => (is => 'ro' , required => 1 , coerce => sub {
     }
 });
 
-has 'mixed'     => (is => 'ro' , default => sub { 'ATTRIBUTES' });
-
-has 'prefixes'  => (is => 'ro' , coerce  => sub {
+has 'mixed'       => (is => 'ro' , default => sub { 'ATTRIBUTES' });
+has 'any_element' => (is => 'ro' , default => sub { 'TAKE_ALL' } , coerce => sub {
+        my $val = $_[0];
+        if (defined $val && $val eq 'TEXTUAL') {
+            return sub {
+                my ($path, $node , $handler) = @_;
+                if ($node && ref($node->[0])) {
+                    $node->[0]->toString
+                }
+                else {
+                    $node;
+                }
+            };
+        }
+        else {
+            $val;
+        }
+});
+has 'prefixes'    => (is => 'ro' , coerce  => sub {
    my ($value) = @_;
    if (Catmandu::Util::is_array_ref($value)) {
        return $value;
@@ -64,6 +80,7 @@ sub BUILD {
     $self->{_reader} = $schema->compile(
             READER          => $self->root,
             mixed_elements  => $self->mixed ,
+            any_element     => $self->any_element ,
             sloppy_floats   => 'true',
             sloppy_integers => 'true' ,
     );

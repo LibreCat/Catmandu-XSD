@@ -13,23 +13,25 @@ use namespace::clean;
 
 with 'Catmandu::Importer';
 
-has 'root'     => (is => 'ro' , required => 1);
-has 'schemas'  => (is => 'ro' , required => 1);
-has 'mixed'    => (is => 'ro' , default => sub { 'ATTRIBUTES' });
-has 'prefixes' => (is => 'ro' , default => sub { [] });
-has 'files'    => (is => 'ro');
-has 'xpath'    => (is => 'ro' , default => sub { '*' });
-has 'example'  => (is => 'ro');
+has 'root'        => (is => 'ro' , required => 1);
+has 'schemas'     => (is => 'ro' , required => 1);
+has 'mixed'       => (is => 'ro' , default => sub { 'ATTRIBUTES' });
+has 'any_element' => (is => 'ro' , default => sub { 'TAKE_ALL' });
+has 'prefixes'    => (is => 'ro' , default => sub { [] });
+has 'files'       => (is => 'ro');
+has 'xpath'       => (is => 'ro' , default => sub { '*' });
+has 'example'     => (is => 'ro');
 
 has 'xsd'      => (is => 'lazy');
 
 sub _build_xsd {
     my $self = $_[0];
     return Catmandu::XSD->new(
-        root     => $self->root ,
-        schemas  => $self->schemas ,
-        mixed    => $self->mixed ,
-        prefixes => $self->prefixes ,
+        root        => $self->root ,
+        schemas     => $self->schemas ,
+        mixed       => $self->mixed ,
+        any_element => $self->any_element ,
+        prefixes    => $self->prefixes ,
     );
 }
 
@@ -91,6 +93,11 @@ sub single_file_generator {
         }
     }
 
+    # Drop all PerlIO layers possibly created by a use open pragma
+    # requirement for XML::LibXML parsing
+    # See: https://metacpan.org/pod/distribution/XML-LibXML/LibXML.pod
+    binmode $self->fh;
+
     sub {
         state $reader = XML::LibXML::Reader->new(IO => $self->fh);
 
@@ -101,8 +108,6 @@ sub single_file_generator {
         return undef unless $match == 1;
 
         my $xml = $reader->readOuterXml();
-
-        $xml =~ s{xmlns="[^"]+"}{};
 
         return undef unless length $xml;
 
