@@ -236,6 +236,11 @@ Optional. The handling of mixed element content. One of ATTRIBUTES (default),
 TEXTUAL, STRUCTURAL, XML_NODE, XML_STRING, CODE reference. See also
 L<Catmandu::XSD> and L<XML::Compile::Translate::Reader>
 
+=item any_element
+
+Optional. The handling of C<<any>> content in schemas. One of TAKE_ALL (default:
+process as XML::LibXML::Node) , SKIP_ALL (ignore these) , TEXTUAL (process as string)
+
 =back
 
 =head1 METHODS
