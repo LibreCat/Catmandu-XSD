@@ -45,6 +45,14 @@ Catmandu::XSD - Modules for handling XML data with XSD compilation
                                  --template t/xml_footer.tt
                                  < shiporder.YAML
 
+     ## Example documents
+
+     # Show an example how a valid XML document needs to be structured for an
+     # XSD scheme.
+     catmandu convert XSD --root {}shiporder
+                          --schemas "t/demo/order/*xsd"
+                          --example 1 to YAML
+
 # DESCRIPTION
 
 [Catmandu::XSD](https://metacpan.org/pod/Catmandu::XSD) contains modules for handling XML data within the [Catmandu](https://metacpan.org/pod/Catmandu)
