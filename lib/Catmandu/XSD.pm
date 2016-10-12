@@ -27,11 +27,15 @@ has 'schemas'   => (is => 'ro' , required => 1 , coerce => sub {
 has 'mixed'       => (is => 'ro' , default => sub { 'ATTRIBUTES' });
 has 'any_element' => (is => 'ro' , default => sub { 'TAKE_ALL' } , coerce => sub {
         my $val = $_[0];
-        if (defined $val && $val eq 'TEXTUAL') {
+        if (defined $val && $val eq 'XML_STRING') {
             return sub {
                 my ($path, $node , $handler) = @_;
-                if ($node && ref($node->[0])) {
-                    $node->[0]->toString
+                if ($node && ref($node)) {
+                    my $str = '';
+                    for (@$node) {
+                        $str .= $_->toString;
+                    }
+                    ('_',$str);
                 }
                 else {
                     $node;

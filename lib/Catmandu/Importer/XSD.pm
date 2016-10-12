@@ -239,7 +239,7 @@ L<Catmandu::XSD> and L<XML::Compile::Translate::Reader>
 =item any_element
 
 Optional. The handling of C<<any>> content in schemas. One of TAKE_ALL (default:
-process as XML::LibXML::Node) , SKIP_ALL (ignore these) , TEXTUAL (process as string)
+process as XML::LibXML::Node) , SKIP_ALL (ignore these) , XML_STRING (process as string)
 
 =back
 
