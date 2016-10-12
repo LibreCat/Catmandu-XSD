@@ -87,6 +87,8 @@ sub commit {
     if ($self->template && $self->count) {
         $self->tt->commit;
     }
+
+    1;
 }
 
 1;
