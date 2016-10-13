@@ -2,6 +2,9 @@ Revision history for Catmandu-XSD
 
 {{$NEXT}}
 
+0.03  2016-10-13 09:15:33 CEST
+  - Fixing documentation errors
+
 0.02  2016-10-12 16:50:30 CEST
   - Adding support for handling <any> defined fields
 

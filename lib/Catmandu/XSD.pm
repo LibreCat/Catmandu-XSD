@@ -6,7 +6,7 @@ use XML::Compile;
 use XML::Compile::Cache;
 use XML::Compile::Util 'pack_type';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 has 'root'      => (is => 'ro' , required => 1);
 has 'schemas'   => (is => 'ro' , required => 1 , coerce => sub {

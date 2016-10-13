@@ -69,7 +69,7 @@ single value elements. Each record is parsed on its own. A record with content:
       <bar>test</bar>
     </foo>
 
-will be parsed into a YAML structure:
+will be parsed into a YAML output like:
 
     catmandu XML to YAML < test.xml
     --
@@ -82,7 +82,7 @@ A record with content:
       <bar>test</bar>
     </foo>
 
-will be parsed into a Perl structure:
+will be parsed into a YAL output like:
 
     catmandu XML to YAML < test2.xml
     --
@@ -174,7 +174,7 @@ This behavious can be changed by setting the 'mixed' flag:
 
     Parse and validate XML data using an XSD file for structural data
 
-- [Catmandu::Importer::XSD](https://metacpan.org/pod/Catmandu::Importer::XSD)
+- [Catmandu::Exporter::XSD](https://metacpan.org/pod/Catmandu::Exporter::XSD)
 
     Serialize and validate XML data using an XSD file for structural data
 
