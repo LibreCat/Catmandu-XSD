@@ -240,6 +240,7 @@ L<Catmandu::XSD> and L<XML::Compile::Translate::Reader>
 
 Optional. The handling of C<<any>> content in schemas. One of TAKE_ALL (default:
 process as XML::LibXML::Node) , SKIP_ALL (ignore these) , XML_STRING (process as string)
+, CODE (provide a reference to parse the data). See L<XML::Compile::Translate::Reader>
 
 =back
 
