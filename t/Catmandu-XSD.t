@@ -210,11 +210,11 @@ binmode(STDOUT, ":utf8");
 
     is $xc->findvalue('mods:titleInfo/mods:title') , 'Alabama blues' , 'mods:title';
 
-    my $xml  = $xsd->to_xml($perl);
+    my $out  = $xsd->to_xml($perl);
 
-    ok $xml , 'got xml';
+    ok $out , 'got xml';
 
-    like $xml , qr/<mods:mods xmlns:mods/ , 'well..looks like XML'
+    like $out , qr/<mods:mods xmlns:mods/ , 'well..looks like XML'
 }
 
 done_testing 34;
