@@ -14,6 +14,8 @@ BEGIN {
 
 require_ok 'Catmandu::XSD';
 
+binmode(STDOUT, ":utf8");
+
 {
     my $xsd = Catmandu::XSD->new(
             root => "{}shiporder" ,
@@ -185,6 +187,9 @@ require_ok 'Catmandu::XSD';
                 "t/demo/mets/mets.xsd" ,
                 "t/demo/mets/xlink.xsd" ,
             ] ,
+            prefixes => [
+                { 'http://www.loc.gov/mods/v3' => 'mods' }
+            ]
     );
 
     ok $xsd , 'got an xsd for mets';
@@ -204,9 +209,15 @@ require_ok 'Catmandu::XSD';
     $xc->registerNs('mods','http://www.loc.gov/mods/v3');
 
     is $xc->findvalue('mods:titleInfo/mods:title') , 'Alabama blues' , 'mods:title';
+
+    my $xml  = $xsd->to_xml($perl);
+
+    ok $xml , 'got xml';
+
+    like $xml , qr/<mods:mods xmlns:mods/ , 'well..looks like XML'
 }
 
-done_testing 32;
+done_testing 34;
 
 sub choose {
     my ($arr,$name) = @_;

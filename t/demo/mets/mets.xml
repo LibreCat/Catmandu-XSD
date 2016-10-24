@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:lc="http://www.loc.gov/mets/profiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rights="http://www.loc.gov/rights/" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:bib="http://www.loc.gov/mets/profiles/modsBibCard" OBJID="loc.afc.afc9999005.1153" PROFILE="lc:modsBibCard">
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:lc="http://www.loc.gov/mets/profiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rights="http://www.loc.gov/rights/"  xmlns:bib="http://www.loc.gov/mets/profiles/modsBibCard" OBJID="loc.afc.afc9999005.1153" PROFILE="lc:modsBibCard">
   <mets:metsHdr LASTMODDATE="2016-08-09T12:12:51.320141-04:00"/>
   <mets:dmdSec ID="dmd1">
     <mets:mdWrap MDTYPE="MODS">
       <mets:xmlData>
-	<mods:mods ID="mods1" version="3.4">
+	<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" ID="mods1" version="3.4">
 	  <mods:titleInfo>
 	    <mods:title>Alabama blues</mods:title>
 	  </mods:titleInfo>
