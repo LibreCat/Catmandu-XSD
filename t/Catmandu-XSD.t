@@ -178,7 +178,35 @@ require_ok 'Catmandu::XSD';
     is $xc->findvalue('//dcterms:accessRights') , 'restricted' , 'dcterms:accessRights';
 }
 
-done_testing 28;
+{
+    my $xsd = Catmandu::XSD->new(
+            root    => "{http://www.loc.gov/METS/}mets",
+            schemas => [
+                "t/demo/mets/mets.xsd" ,
+                "t/demo/mets/xlink.xsd" ,
+            ] ,
+    );
+
+    ok $xsd , 'got an xsd for mets';
+
+    my $xml = read_file("t/demo/mets/mets.xml");
+
+    my $perl = $xsd->parse($xml);
+
+    ok $perl , 'parsed mets/mets.xml';
+
+    my $mods = $perl->{dmdSec}->[0]->{mdWrap}->{xmlData}->{'{http://www.loc.gov/mods/v3}mods'}->[0];
+
+    my $xc = XML::LibXML::XPathContext->new($mods);
+
+    ok $xc , 'created a xpath context for holdings';
+
+    $xc->registerNs('mods','http://www.loc.gov/mods/v3');
+
+    is $xc->findvalue('mods:titleInfo/mods:title') , 'Alabama blues' , 'mods:title';
+}
+
+done_testing 32;
 
 sub choose {
     my ($arr,$name) = @_;
