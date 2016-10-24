@@ -4,6 +4,7 @@
   <mets:dmdSec ID="dmd1">
     <mets:mdWrap MDTYPE="MODS">
       <mets:xmlData>
+         <!-- It is important to have the MODS declaration in the xmlData section -->
 	<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" ID="mods1" version="3.4">
 	  <mods:titleInfo>
 	    <mods:title>Alabama blues</mods:title>
