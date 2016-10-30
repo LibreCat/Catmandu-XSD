@@ -300,11 +300,15 @@ This behavious can be changed by setting the 'mixed' flag:
 
 =item L<Catmandu::Importer::XSD>
 
-Parse and validate XML data using an XSD file for structural data
+Parse and validate XML data using an XSD file for structural data.
 
 =item L<Catmandu::Exporter::XSD>
 
-Serialize and validate XML data using an XSD file for structural data
+Serialize and validate XML data using an XSD file for structural data.
+
+=item L<Catmandu::Fix::xpath_map>
+
+Map XML from XSD-any elements into data fields using XPath expressions.
 
 =back
 
