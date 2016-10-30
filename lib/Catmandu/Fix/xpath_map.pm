@@ -4,7 +4,6 @@ use Catmandu::Sane;
 use XML::LibXML::XPathContext;
 use Moo;
 use Catmandu::Fix::Has;
-use Data::Dumper;
 
 with 'Catmandu::Fix::Base';
 
