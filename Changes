@@ -1,6 +1,8 @@
 Revision history for Catmandu-XSD
 
 {{$NEXT}}
+
+0.04  2016-10-30 17:14:36 CET
   - Adding xpath_map support
   
 0.03  2016-10-13 09:15:33 CEST

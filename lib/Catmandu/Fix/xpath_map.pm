@@ -7,7 +7,7 @@ use Catmandu::Fix::Has;
 
 with 'Catmandu::Fix::Base';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 has old_path   => (fix_arg => 1);
 has xpath      => (fix_arg => 1);
