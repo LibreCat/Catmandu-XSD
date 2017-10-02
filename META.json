@@ -47,11 +47,9 @@
       },
       "test" : {
          "requires" : {
-            "Test::Deep" : "0",
+            "Test::Exception" : "0",
             "Test::More" : "1.001003",
-            "Test::Pod" : "0",
             "Test::Simple" : "1.001003",
-            "Test::Warnings" : "0",
             "XML::XPath" : "1.13"
          }
       }
@@ -72,6 +70,6 @@
    "x_contributors" : [
       "Patrick Hochstenbach <patrick.hochstenbach@ugent.be>"
    ],
-   "x_serialization_backend" : "Cpanel::JSON::XS version 3.0233"
+   "x_serialization_backend" : "Cpanel::JSON::XS version 3.0239"
 }
 
