@@ -2,3 +2,4 @@
 local
 cpanfile.snapshot
 Catmandu-XSD-*
+.perl-version

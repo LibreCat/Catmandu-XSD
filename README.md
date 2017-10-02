@@ -172,11 +172,15 @@ This behavious can be changed by setting the 'mixed' flag:
 
 - [Catmandu::Importer::XSD](https://metacpan.org/pod/Catmandu::Importer::XSD)
 
-    Parse and validate XML data using an XSD file for structural data
+    Parse and validate XML data using an XSD file for structural data.
 
 - [Catmandu::Exporter::XSD](https://metacpan.org/pod/Catmandu::Exporter::XSD)
 
-    Serialize and validate XML data using an XSD file for structural data
+    Serialize and validate XML data using an XSD file for structural data.
+
+- [Catmandu::Fix::xpath\_map](https://metacpan.org/pod/Catmandu::Fix::xpath_map)
+
+    Map XML from XSD-any elements into data fields using XPath expressions.
 
 # BUGS, QUESTIONS, HELP
 
