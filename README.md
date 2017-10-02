@@ -206,10 +206,13 @@ or follow the blog posts at: https://librecatproject.wordpress.com/
 
 Patrick Hochstenbach , `patrick.hochstenbach at ugent.be`
 
-# COPYRIGHT AND LICENSE
+# LICENSE AND COPYRIGHT
 
-This is free software; you can redistribute it and/or modify it under the same
-terms as the Perl 5 programming language system itself.
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See [http://dev.perl.org/licenses/](http://dev.perl.org/licenses/) for more information.
 
 # SEE ALSO
 
