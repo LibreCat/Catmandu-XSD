@@ -68,7 +68,7 @@
          "web" : "https://github.com/LibreCat/Catmandu-XSD"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_contributors" : [
       "Mohammad S Anwar <mohammad.anwar@yahoo.com>",
       "Patrick Hochstenbach <patrick.hochstenbach@ugent.be>"
