@@ -7,6 +7,8 @@ on 'test', sub {
   requires 'XML::XPath', '1.13';
 };
 
+requires 'Moo', '0';
+requires 'namespace::clean', '0';
 requires 'Catmandu', '>= 1.0';
 requires 'Catmandu::Template' , '0';
 requires 'XML::Compile', '0';
