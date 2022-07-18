@@ -221,6 +221,7 @@ binmode(STDOUT, ":utf8");
     my $xsd = Catmandu::XSD->new(
             root    => "{}article",
             schemas => "t/demo/jats/*.xsd" , 
+            mixed   => "TEXTUAL"  # Ignore mixed elements keep only the text
     );
 
     ok $xsd , 'got an xsd for jats';
@@ -233,8 +234,8 @@ binmode(STDOUT, ":utf8");
 
     my $publisherName = $perl->{'front'}->{'journal-meta'}->{'publisher'}->{'publisher-name'};
 
-    # Jats is annoying because it contains 'any' and 'anyAttribute' XSD schemas
-    is $publisherName->{'_'}->textContent , 'Routledge'; 
+    # Jats is annoying because it contains 'mixed', 'any' and 'anyAttribute' XSD schemas
+    is $publisherName->{_} , 'Routledge'; 
 }
 
 done_testing 37;
