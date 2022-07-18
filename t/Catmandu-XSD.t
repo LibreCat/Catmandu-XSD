@@ -229,8 +229,6 @@ binmode(STDOUT, ":utf8");
 
     my $perl = $xsd->parse($xml);
 
-    my $perl = $xsd->parse($xml);
-
     ok $perl , 'parsed jats/demo.xml';
 
     my $publisherName = $perl->{'front'}->{'journal-meta'}->{'publisher'}->{'publisher-name'};
