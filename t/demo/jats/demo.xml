@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO646-US"?>
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/archiving/3.0/archivearticle3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:mml="http://www.w3.org/1998/Math/MathML"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         article-type="research-article"><!--Input file: CALR_A_2020723_J.xml
+Processed with: tfjats1.2-to-nlm3-headers.xsl
+$Id: tfjats1.2-to-nlm3-headers.xsl,v 1.13 2020/04/12 21:26:20 lee Exp $-->
+   <front>
+      <journal-meta>
+         <journal-id journal-id-type="publisher-acronym">CALR</journal-id>
+         <journal-id journal-id-type="publisher-id">calr20</journal-id>
+         <journal-title-group>
+            <journal-title>Action Learning: Research and Practice</journal-title>
+         </journal-title-group>
+         <issn pub-type="ppub">1476-7333</issn>
+         <issn pub-type="epub">1476-7341</issn>
+         <publisher>
+            <publisher-name>Routledge</publisher-name>
+         </publisher>
+      </journal-meta>
+      <article-meta>
+         <article-id pub-id-type="publisher-id">2020723</article-id>
+         <article-id pub-id-type="doi">10.1080/14767333.2021.2020723</article-id>
+         <article-id pub-id-type="submission-id">CALR-2021-0025.R3</article-id>
+         <article-categories>
+            <subj-group subj-group-type="article-type">
+               <subject>Research Article</subject>
+            </subj-group>
+            <subj-group subj-group-type="heading">
+               <subject>Articles</subject>
+            </subj-group>
+         </article-categories>
+         <title-group>
+            <article-title>An action learning approach to mathematics learning in the light of the cognitional theory of Bernard Lonergan</article-title>
+         </title-group>
+         <contrib-group>
+            <contrib contrib-type="author">
+               <x xml:space="preserve"> </x>
+               <uri content-type="orcid">http://orcid.org/0000-0001-9778-5569</uri>
+               <string-name>
+                  <given-names>Cornelia</given-names>
+                  <x xml:space="preserve"> </x>
+                  <surname>Connolly</surname>
+               </string-name>
+               <xref ref-type="aff" rid="AF1">
+                  <sup>a</sup>
+               </xref>
+               <xref ref-type="aff" rid="AF2">
+                  <sup>b</sup>
+               </xref>
+               <xref ref-type="corresp" rid="cor1"/>
+               <xref ref-type="bio" rid="B01"/>
+               <x xml:space="preserve"> &amp; </x>
+            </contrib>
+            <contrib contrib-type="author">
+               <x xml:space="preserve"> </x>
+               <uri content-type="orcid">http://orcid.org/0000-0001-7141-1913</uri>
+               <string-name>
+                  <given-names>Tom</given-names>
+                  <x xml:space="preserve"> </x>
+                  <surname>Cosgrove</surname>
+               </string-name>
+               <xref ref-type="aff" rid="AF3">
+                  <sup>c</sup>
+               </xref>
+               <xref ref-type="bio" rid="B02"/>
+            </contrib>
+            <aff id="AF1">
+               <label>
+                  <sup>a</sup>
+               </label> School of Education, <institution>National University of Galway</institution>, <named-content content-type="city">Galway</named-content>, <country>Ireland</country>
+            </aff>
+            <aff id="AF2">
+               <label>
+                  <sup>b</sup>
+               </label> Lero, SFI Centre for Software Research, <institution>National University of Ireland Galway</institution>, <named-content content-type="city">Galway</named-content>, <country>Ireland</country>
+            </aff>
+            <aff id="AF3">
+               <label>
+                  <sup>c</sup>
+               </label> School of Engineering, <institution>University of Limerick</institution>, <named-content content-type="city">Limerick</named-content>, <country>Ireland</country>
+            </aff>
+            <bio id="B01">
+               <p>
+                  <italic>
+                     <bold>Cornelia Connolly</bold>
+                  </italic> is a lecturer at the School of Education at the National University of Galway, Ireland. In addition to a PhD in pedagogical innovation, she holds a BEng (Hons) and MEng (Hons) in Computer Engineering. Her research has three interweaving threads in education design, technology and computer science education.</p>
+            </bio>
+            <bio id="B02">
+               <p>
+                  <italic>
+                     <bold>Tom Cosgrove</bold>
+                  </italic> is founding professor of the problem-based programme in Civil Engineering at the University of Limerick. He practised as a structural engineer for 28 years. He is a Fellow of Engineers Ireland and of the Institution of Structural Engineers. As well as his research in structural engineering he is currently pursuing action research on reflective writing in engineering education.</p>
+            </bio>
+         </contrib-group>
+         <author-notes>
+            <corresp id="cor1">
+               <label>CONTACT </label> Cornelia Connolly <email xlink:href="cornelia.connolly@nuigalway.ie">cornelia.connolly@nuigalway.ie</email>
+            </corresp>
+         </author-notes>
+         <pub-date pub-type="ppub">
+            <day>02</day>
+            <month>01</month>
+            <year>2022</year>
+            <string-date>March 2022</string-date>
+         </pub-date>
+         <volume>19</volume>
+         <issue>1</issue>
+         <fpage seq="4">33</fpage>
+         <lpage>48</lpage>
+         <history>
+            <date date-type="received">
+               <day>3</day>
+               <month>5</month>
+               <year>2021</year>
+            </date>
+            <date date-type="accepted">
+               <day>16</day>
+               <month>12</month>
+               <year>2021</year>
+            </date>
+         </history>
+         <permissions>
+            <copyright-statement>&#xa9; 2021 The Author(s). Published by Informa UK Limited, trading as Taylor &amp; Francis Group</copyright-statement>
+            <copyright-year>2021</copyright-year>
+            <copyright-holder>The Author(s)</copyright-holder>
+            <license license-type="open-access"
+                     xlink:href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+               <license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License (<ext-link ext-link-type="uri"
+                            xlink:href="http://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link>), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited, and is not altered, transformed, or built upon in any way.</license-p>
+            </license>
+         </permissions>
+         <self-uri content-type="pdf" xlink:href="14767333.2021.2020723.pdf"/>
+         <abstract>
+            <title>ABSTRACT</title>
+            <p>The educational benefits of challenge- or problem-based approaches to learning are now well established. Action Research (AR) and Action Learning (AL) together provide educators with an ethic, a research methodology and a pedagogical strategy for harnessing and developing the motive power of purposeful activity for reflective enquiry in teaching and learning. However it is argued here that AR and AL implementation demands a sophisticated epistemological awareness on the part of the teacher-researcher. This paper suggests that the cognitional theory of Bernard Lonergan comprises a powerful resource particularly suited to underpin, inform and orient the practice of AL applied to the teaching of mathematics through practical problem solving. In this paper, aspects of Lonergan&#x2019;s thought are outlined and brought to bear on the development of an AL approach for teaching mathematics and its applications through collaborative practical problem solving. Lonergan&#x2019;s thought, as well as offering a theoretical framework of great clarity, when brought to bear on the development and implementation of AL strategies, has the potential to guide researchers, teachers and students in the design and implementation of such strategies and worth incorporating in practice. Also most beneficial for students as they negotiate the complex and dynamic epistemological territory that characterises AL.</p>
+         </abstract>
+         <kwd-group kwd-group-type="author">
+            <title>KEYWORDS</title>
+            <kwd>Problem-solving</kwd>
+            <kwd>mathematics learning</kwd>
+            <kwd>action research</kwd>
+            <kwd>action learning</kwd>
+            <kwd>epistemology</kwd>
+         </kwd-group>
+         <counts>
+            <fig-count count="1"/>
+            <table-count count="0"/>
+            <equation-count count="0"/>
+            <ref-count count="58"/>
+            <page-count count="16"/>
+         </counts>
+      </article-meta>
+   </front>
+</article>

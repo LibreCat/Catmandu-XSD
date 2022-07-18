@@ -217,7 +217,29 @@ binmode(STDOUT, ":utf8");
     like $out , qr/<mods:mods xmlns:mods/ , 'well..looks like XML'
 }
 
-done_testing 34;
+{
+    my $xsd = Catmandu::XSD->new(
+            root    => "{}article",
+            schemas => "t/demo/jats/*.xsd" , 
+    );
+
+    ok $xsd , 'got an xsd for jats';
+
+    my $xml = read_file("t/demo/jats/demo.xml");
+
+    my $perl = $xsd->parse($xml);
+
+    my $perl = $xsd->parse($xml);
+
+    ok $perl , 'parsed jats/demo.xml';
+
+    my $publisherName = $perl->{'front'}->{'journal-meta'}->{'publisher'}->{'publisher-name'};
+
+    # Jats is annoying because it contains 'any' and 'anyAttribute' XSD schemas
+    is $publisherName->{'_'}->textContent , 'Routledge'; 
+}
+
+done_testing 37;
 
 sub choose {
     my ($arr,$name) = @_;
